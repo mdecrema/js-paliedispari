@@ -1,24 +1,24 @@
-
 // PAROLA PALINDROMA
 document.getElementById("pali").addEventListener("click", function() {
   // Richiesta di una parola all'utente
   var parola= prompt("Inserisci una parola:");
   // Variabili di supporto
-  var prova= "";
-  var prova2= "";
+  var prova="";
+  var prova2="";
   // Metodo per ottenere il numero di lettere nella parola
   var numLettere= parola.length;
-  // Metà del totale di lettere presenti
-  var halfWord= numLettere/2;
-  // PROVA PROVA PROVA PROVA
-  for (var i=0; i<halfWord; i++) {
-   prova += parola.charAt(i);
+  var half= numLettere / 2;
+  // Ciclo for
+    prova += parola.substr(0,half);
+    for(var i=numLettere-1; i>=half; i--) {
+    prova2 += parola.substr(i,1);
+      if (prova != prova2) {
+        console.log("NON palindroma");
+      } else {
+        console.log("SI palindroma")
+    }
   }
-  for (var a=numLettere ; a > halfWord; a--);
-    prova2 += parola.charAt(a);
-    console.log(prova+" "+prova2);
 });
-
 
 // PARI o DISPARI
 document.getElementById("dispari").addEventListener("click", function() {
