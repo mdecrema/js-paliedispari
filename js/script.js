@@ -12,12 +12,12 @@ document.getElementById("pali").addEventListener("click", function() {
     prova += parola.substr(0,half);
     for(var i=numLettere-1; i>=half; i--) {
     prova2 += parola.substr(i,1);
-      if (prova != prova2) {
-        console.log("NON palindroma");
-      } else {
-        console.log("SI palindroma")
     }
-  }
+    if (prova == prova2) {
+      alert("SI palindroma");
+    } else {
+      alert("NO palindroma");
+    }
 });
 
 // PARI o DISPARI
